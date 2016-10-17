@@ -6,9 +6,9 @@
   <meta name="description" content="Лучший Барбершоп в Санкт-Петербурге">
   <meta name="author" content="sklart.ru">
   <meta name="description" content="Предоставляем услуги стрижки, подбираем аксессуары для ухода за волосами и бородой">
-  <meta name="keywords" content="парикмахерская, стрижка, уход, аксессуары, волосы, парихмахерская, борода">
+  <meta name="keywords" content="Парикмахерская, стрижка, уход, аксессуары, волосы, парихмахерская, борода">
   <!-- Links -->
-  <link rel="StyleSheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="icon" href="img/favicon.ico" type="image/ico">
   <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 </head>
@@ -17,7 +17,7 @@
     <div class="container clearfix">
       <nav class="main-navigation">
         <ul>
-          <li class="active"><a href="#">Главная</a></li>
+          <li class="current-page"><a href="#">Главная</a></li>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="price.html">Прайс-лист</a></li>
@@ -132,13 +132,12 @@
   <!-- Login window -->
   <form class="login-form" action="/login" method="post">
     <h2>Личный кабинет</h2>
-    <p>Введите, пожалуйста, свой логин и пароль</p>
-    <a href="#">Если вы забыли пароль</a>
-    <input type="text" name="login" placeholder="Логин" required>
-    <input type="password" name="password" placeholder="Пароль" required>
+    <p>Введите, пожалуйста, свой логин и пароль:</p>
+    <input type="text" name="login" required>
+    <input type="password" name="password" required>
     <div>
-      <label for="remember">Запомните меня</label>
       <input type="checkbox" name="remember" checked>
+      <label for="remember">Запомните меня</label>
       <a href="#">Я забыл пароль!</a>
     </div>
     <button class="btn" type="submit">Войти</button>

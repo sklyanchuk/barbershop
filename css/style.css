@@ -4,13 +4,116 @@ body {
   text-transform: uppercase;
   font-family: "PT Sans Narrow", sans-serif, Arial;
   font-weight: bold;
-  /*background-image: url('../img/index-background.jpg');
-  background-position: center;
+  font-size: 14px;
+  line-height: 24px;
+  /*background-image: url("../img/index-background.jpg");
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;*/
+  background-size: cover;
+  background-color: #fff;*/
+}
+p,
+ul,
+h2,
+figure {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+ul {
+  list-style: none;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  width: 940px;
+  margin: auto;
+}
+.btn {
+  background-color: #fff;
+  color: #000;
 }
 
-.container {
-  width: 900px;
+/* Header */
+.main-header {
+  min-height: 70px;
+  font-size: 16px;
+  background-color: #000;
+  vertical-align: top;
+}
+.main-header a {
+  display: block;
+  padding: 25px 20px;
+  line-height: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.main-header a:hover,
+.main-header a:focus {
+  background-color: #242424;
+}
+.main-navigation {
+  float: left;
+}
+.main-navigation li {
+  display: inline-block;
+}
+.current-page a {
+  position: relative;
+}
+.current-page a::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: #fff;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+}
+
+.user-block {
+  float: right;
+}
+.user-block a {
+  position: relative;
+  padding-left: 50px;
+}
+.user-block a::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url("../img/sprites.png") no-repeat;
+  background-position: 0 -212px;
+  opacity: .4;
+  top: 27px;
+  left: 19px;
+}
+
+/* Login window */
+.login-form {
+  width: 300px;
+  display: none;
+  padding: 35px 80px;
   margin: auto;
+  background-image: url("../img/content-background.jpg");
+  background-repeat: repeat;
+}
+.login-form input {
+  display: block;
+  width: 294px;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+  line-height: 36px;
+  font-family: "PT Sans Narrow", sans-serif, Arial;
+  font-weight: bold;
+  font-size: 14px;
 }
