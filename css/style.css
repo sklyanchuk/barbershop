@@ -6,11 +6,11 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  /*background-image: url("../img/index-background.jpg");
+  background-color: #000;
+  background-image: url("../img/index-background.jpg");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #fff;*/
+  color: #fff;
 }
 p,
 ul,
@@ -28,6 +28,9 @@ h3 {
 ul {
   list-style: none;
 }
+main {
+  color: #000;
+}
 .clearfix::after {
   content: "";
   display: table;
@@ -35,19 +38,36 @@ ul {
 }
 .container {
   width: 940px;
-  margin: auto;
+  margin: 0 auto;
 }
 .btn {
-  background-color: #fff;
-  color: #000;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 0;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif, Arial;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  border: none;
+  width: 140px;
+  text-align: center;
+}
+.inner-page {
+    background: white url("../img/content-background.jpg");
 }
 
+
 /* Header */
+
 .main-header {
   min-height: 70px;
   font-size: 16px;
   background-color: #000;
   vertical-align: top;
+  margin-bottom: 60px;
 }
 .main-header a {
   display: block;
@@ -97,8 +117,85 @@ ul {
   top: 27px;
   left: 19px;
 }
+.user-block a:hover::before {
+  opacity: 1;
+}
+
+/* Logo */
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*Features*/
+.features {
+  margin-bottom: 65px;
+  color: #fff;
+}
+.features-item {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.features-title {
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.features-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 145px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.features-item p {
+  padding: 0 20px;
+}
+
+/* Index content */
+
+.index-content {
+  background: url("../img/column-delimiter.png") no-repeat center, url("../img/content-background.jpg") repeat;
+  margin-bottom: 35px;
+}
+.content-column-left,
+.content-column-right {
+  width: 300px;
+  padding: 55px 80px;
+}
+.content-column-left {
+  float: left;
+}
+.content-column-right {
+  float: right;
+}
+.content-column-title {
+  margin-bottom: 40px;
+}
+.gallery-content {
+  margin-bottom: 35px;
+}
+.gallery-content img {
+  border: 7px solid #fff;
+}
+.gallery-prev {
+  float: left;
+}
+.gallery-next {
+  float: right;
+}
 
 /* Login window */
+
 .login-form {
   width: 300px;
   display: none;
