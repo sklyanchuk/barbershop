@@ -2,7 +2,7 @@
 
 <p>
   Название сайта: Barbershop<br>
-  Домен: sklart.ru/barbershop
+  Домен: <a href="//sklart.ru/barbershop">sklart.ru/barbershop</a>
 </p>
 
 <h2>Общие технические требования</h2>

@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Барбершоп «Бородинский»</title>
   <meta name="description" content="Лучший Барбершоп в Санкт-Петербурге">
+  <meta name="author" content="sklart.ru">
+  <meta name="description" content="Предоставляем услуги стрижки, подбираем аксессуары для ухода за волосами и бородой">
+  <meta name="keywords" content="парикмахерская, стрижка, уход, аксессуары, волосы, парихмахерская, борода">
   <!-- Links -->
   <link rel="StyleSheet" href="css/style.css" type="text/css">
   <link rel="icon" href="img/favicon.ico" type="image/ico">
@@ -17,8 +20,8 @@
           <li class="active"><a href="#">Главная</a></li>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li><a href="#">Магазин</a></li>
+          <li><a href="price.html">Прайс-лист</a></li>
+          <li><a href="shop.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -95,8 +98,8 @@
           <h2 class="content-column-title">Записаться</h2>
           <p>Укажите желаемую дату и время, и мы свяжемся с вами для подтверждения брони</p>
           <form action="/echo" method="post">
-            <input type="date" name="date" value="" placeholder="Дата">
-            <input type="time" name="time" value="" placeholder="Время">
+            <input type="date" name="date" value="">
+            <input type="time" name="time" value="">
             <input type="text" name="name" value="" placeholder="Ваше имя">
             <input type="tel" name="phone" value="" placeholder="Телефон">
             <button class="btn" type="submit">Отправить</button>
@@ -120,10 +123,26 @@
         <a href="#" class="social-btn social-btn-inst"></a>
       </section>
       <address class="footer-copyright">
-        <p>Верстка сайта:</p>
-        <a href="#" class="btn">sklart.ru</a>
+        <p>Дизайн сайта:</p>
+        <a href="//glukhanko.ru" class="btn">glukhanko.ru</a>
       </address>
     </div>
   </footer>
+
+  <!-- Login window -->
+  <form class="login-form" action="/login" method="post">
+    <h2>Личный кабинет</h2>
+    <p>Введите, пожалуйста, свой логин и пароль</p>
+    <a href="#">Если вы забыли пароль</a>
+    <input type="text" name="login" placeholder="Логин" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <div>
+      <label for="remember">Запомните меня</label>
+      <input type="checkbox" name="remember" checked>
+      <a href="#">Я забыл пароль!</a>
+    </div>
+    <button class="btn" type="submit">Войти</button>
+  </form>
+
 </body>
 </html>
