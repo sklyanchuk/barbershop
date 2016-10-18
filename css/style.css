@@ -3,7 +3,7 @@ body {
   padding: 0;
   text-transform: uppercase;
   font-family: "PT Sans Narrow", sans-serif, Arial;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
   background-color: #000;
@@ -31,6 +31,7 @@ ul {
 main {
   color: #000;
 }
+
 .clearfix::after {
   content: "";
   display: table;
@@ -54,6 +55,12 @@ main {
   border: none;
   width: 140px;
   text-align: center;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #663d15;
+  outline: 0;
 }
 .inner-page {
     background: white url("../img/content-background.jpg");
@@ -161,6 +168,7 @@ main {
   padding: 0 20px;
 }
 
+
 /* Index content */
 
 .index-content {
@@ -170,6 +178,7 @@ main {
 .content-column-left,
 .content-column-right {
   width: 300px;
+  height: 320px;
   padding: 55px 80px;
 }
 .content-column-left {
@@ -179,8 +188,25 @@ main {
   float: right;
 }
 .content-column-title {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
+
+
+/* News */
+
+.news-preview li {
+  padding-bottom: 26px;
+}
+.news-preview time {
+  font-family: "Georia Italic";
+  font-weight: 400;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+
+/* Gallery */
+
 .gallery-content {
   margin-bottom: 35px;
 }
@@ -192,6 +218,134 @@ main {
 }
 .gallery-next {
   float: right;
+}
+
+
+/* Main contacts */
+
+.main-contacts p {
+  padding-bottom: 29px;
+}
+.main-contacts p:last-child {
+  margin-bottom: 29px;
+}
+.contacts-navigate-btn {
+  float: left;
+}
+.contacts-feedback-btn {
+  float: right;
+}
+
+
+/* Appointment form */
+
+.appointment-form p {
+  margin-bottom: 30px;
+}
+
+.appointment-form input {
+  float: left;
+  bottom: 0;
+  width: 105px;
+  border: 2px solid #000;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background: #f9f6f3;
+}
+.appointment-form input:nth-child(2n) {
+  float: right;
+}
+.appointment-form input::-webkit-input-placeholder {color: #000;}
+.appointment-form input::-moz-placeholder {color: #000;}
+.appointment-form input:-moz-placeholder {color: #000;}
+.appointment-form input:-ms-input-placeholder {color: #000;}
+
+.appointment-form input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.appointment-form input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.appointment-form input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.appointment-form input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.appointment-form input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+.appointment-form input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+.appointment-form input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+.appointment-form input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
+
+.appointment-form input:focus {
+  border: 2px solid #663d15;
+  outline: 0;
+}
+.appointment-form .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* Footer */
+
+.main-footer {
+  background: #222 url("../img/footer-background.jpg");
+  margin-top: 60px;
+  padding: 60px 0;
+}
+.main-footer-column {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.footer-contacts {
+  float: left;
+  width: 340px;
+  text-align: left;
+}
+.footer-social {
+  float: left;
+  max-width: 240px;
+  text-align: center;
+  margin-left: 55px;
+}
+.footer-social .social-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 5px 5px 0 5px;
+  background: #000 url("../img/sprites.png") no-repeat center;
+}
+.footer-social .social-btn-vk {
+  background-position: 7px -826px;
+}
+.footer-social .social-btn-fb {
+  background-position: 14px -549px;
+}
+.footer-social .social-btn-inst {
+  background-position: 10px -691px;
+}
+.social-btn-vk:hover {
+  background-color: #fff;
+  background-position: 7px -760px;
+}
+.social-btn-fb:hover {
+  background-color: #fff;
+  background-position: 14px -476px;
+}
+.social-btn-inst:hover {
+  background-color: #fff;
+  background-position: 10px -620px;
+}
+.footer-copyright {
+  max-width: 320px;
+  float: right;
+  font-style: normal;
+}
+.footer-author-btn {
+  margin-top: 5px;
+}
+.footer-author-btn:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* Login window */
@@ -213,4 +367,8 @@ main {
   font-family: "PT Sans Narrow", sans-serif, Arial;
   font-weight: bold;
   font-size: 14px;
+}
+.login-form input:focus {
+  border: 2px solid #663d15;
+  outline: 0;
 }
