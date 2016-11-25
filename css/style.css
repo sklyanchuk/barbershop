@@ -1,12 +1,10 @@
 body {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
   font-family: "PT Sans Narrow", sans-serif, Arial;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  background-color: #000;
+  text-transform: uppercase;
+  background-color: #111;
   background-image: url("../img/index-background.jpg");
   background-position: center top;
   background-repeat: no-repeat;
@@ -31,6 +29,29 @@ ul {
 main {
   color: #000;
 }
+input {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background: #f9f6f3;
+  border: 2px solid #000;
+  padding: 8px 15px;
+}
+input::-webkit-input-placeholder {color: #000;}
+input::-moz-placeholder {color: #000;}
+input:-moz-placeholder {color: #000;}
+input:-ms-input-placeholder {color: #000;}
+
+input::-webkit-input-placeholder       {text-indent: 0;   transition: text-indent 0.3s ease;}
+input::-moz-placeholder                {text-indent: 0;   transition: text-indent 0.3s ease;}
+input:-moz-placeholder                 {text-indent: 0;   transition: text-indent 0.3s ease;}
+input:-ms-input-placeholder            {text-indent: 0;   transition: text-indent 0.3s ease;}
+input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
 
 .clearfix::after {
   content: "";
@@ -40,6 +61,7 @@ main {
 .container {
   width: 940px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 .btn {
   display: inline-block;
@@ -62,6 +84,13 @@ main {
   background-color: #663d15;
   outline: 0;
 }
+.btn:disabled {
+  cursor: default;
+  opacity: .5;
+}
+.btn:disabled:hover {
+  background-color: #000;
+}
 .inner-page {
     background: white url("../img/content-background.jpg");
 }
@@ -71,7 +100,6 @@ main {
 
 .main-header {
   min-height: 70px;
-  font-size: 16px;
   background-color: #000;
   vertical-align: top;
   margin-bottom: 60px;
@@ -90,8 +118,13 @@ main {
 .main-navigation {
   float: left;
 }
+.main-navigation ul {
+  font-size: 0;
+  list-style: none;
+}
 .main-navigation li {
   display: inline-block;
+  font-size: 16px;
 }
 .current-page a {
   position: relative;
@@ -107,7 +140,9 @@ main {
 }
 
 .user-block {
+  font-size: 16px;
   float: right;
+  max-width: 140px;
 }
 .user-block a {
   position: relative;
@@ -118,9 +153,9 @@ main {
   position: absolute;
   width: 18px;
   height: 18px;
-  background: url("../img/sprites.png") no-repeat;
+  background: transparent url("../img/sprites.png") no-repeat;
   background-position: 0 -212px;
-  opacity: .4;
+  opacity: .3;
   top: 27px;
   left: 19px;
 }
@@ -142,6 +177,7 @@ main {
 }
 .features-item {
   display: inline-block;
+  vertical-align: top;
   width: 33%;
   text-align: center;
 }
@@ -154,7 +190,9 @@ main {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 145px;
+  left: 50%;
+  margin-left: -10px;
+  display: block;
   width: 20px;
   height: 20px;
   background-color: #fff;
@@ -227,7 +265,7 @@ main {
   padding-bottom: 29px;
 }
 .main-contacts p:last-child {
-  margin-bottom: 29px;
+  margin-bottom: 21px;
 }
 .contacts-navigate-btn {
   float: left;
@@ -242,45 +280,22 @@ main {
 .appointment-form p {
   margin-bottom: 30px;
 }
-
 .appointment-form input {
   float: left;
   bottom: 0;
   width: 105px;
-  border: 2px solid #000;
-  padding: 10px 15px;
   margin-bottom: 20px;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  background: #f9f6f3;
 }
-.appointment-form input:nth-child(2n) {
+.appointment-form input:nth-child(even) {
   float: right;
 }
-.appointment-form input::-webkit-input-placeholder {color: #000;}
-.appointment-form input::-moz-placeholder {color: #000;}
-.appointment-form input:-moz-placeholder {color: #000;}
-.appointment-form input:-ms-input-placeholder {color: #000;}
-
-.appointment-form input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.appointment-form input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.appointment-form input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.appointment-form input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.appointment-form input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
-.appointment-form input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
-.appointment-form input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
-.appointment-form input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
-
 .appointment-form input:focus {
   border: 2px solid #663d15;
   outline: 0;
 }
 .appointment-form .btn {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 14px;
 }
 
 
@@ -304,13 +319,13 @@ main {
 .footer-social {
   float: left;
   max-width: 240px;
-  text-align: center;
   margin-left: 55px;
 }
 .footer-social .social-btn {
   width: 40px;
   height: 40px;
   display: inline-block;
+  vertical-align: top;
   margin: 5px 5px 0 5px;
   background: #000 url("../img/sprites.png") no-repeat center;
 }
@@ -351,24 +366,51 @@ main {
 /* Login window */
 
 .login-form {
+  color: #000;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  margin-left: -230px;
   width: 300px;
   display: none;
-  padding: 35px 80px;
-  margin: auto;
+  padding: 55px 80px;
   background-image: url("../img/content-background.jpg");
   background-repeat: repeat;
 }
+.login-form-close {
+  position: absolute;
+  right: -55px;
+  top: 55px;
+  width: 22px;
+  height: 22px;
+  background: url("../img/sprites.png") 0 -140px no-repeat;
+  cursor: pointer;
+}
+.login-form .login-header {
+  padding-bottom: 30px;
+}
+.login-form p {
+  padding-bottom: 30px;
+}
 .login-form input {
   display: block;
-  width: 294px;
-  border: 2px solid #000;
+  width: 264px;
   margin-bottom: 10px;
-  line-height: 36px;
-  font-family: "PT Sans Narrow", sans-serif, Arial;
-  font-weight: bold;
-  font-size: 14px;
 }
 .login-form input:focus {
   border: 2px solid #663d15;
   outline: 0;
+}
+.login-form .remember-forget-block {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+.remember-forget-block label {
+  float: left;
+}
+.remember-forget-block .forget-pass {
+  float: right;
+}
+.login-form button {
+  width: 100%;
 }
