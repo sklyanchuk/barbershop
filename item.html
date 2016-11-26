@@ -90,5 +90,21 @@
       </address>
     </div>
   </footer>
+
+  <!-- Login window -->
+  <div class="modal-login">
+    <a href="#" class="modal-login-close"></a>
+    <h2 class="modal-login-title">Личный кабинет</h2>
+    <p>Введите, пожалуйста, свой логин и пароль:</p>
+    <form class="login-form" id="loginForm" action="/login" method="post">
+      <input type="text" class="icon-login" name="login" placeholder="Логин" required>
+      <input type="password" class="icon-password" name="password" placeholder="Пароль" required>
+      <input type="checkbox" name="remember" id="remember-me" checked>
+      <label for="remember-me">Запомните меня</label>
+      <a href="#" class="restore">Я забыл пароль!</a>
+      <button class="btn btn-submit" type="submit">Войти</button>
+    </form>
+  </div>
+
 </body>
 </html>
