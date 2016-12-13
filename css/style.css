@@ -389,6 +389,8 @@ input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-ind
 }
 .modal-login-visible {
   display: block;
+}
+.modal-login-open-animation {
   -webkit-animation: bounce 0.6s;
        -o-animation: bounce 0.6s;
           animation: bounce 0.6s;
@@ -446,7 +448,7 @@ input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-ind
 .login-form input[type="checkbox"] + label:hover {
   color: #663d15;
 }
-.login-form input[type="checkbox"] + label:before {
+.login-form input[type="checkbox"] + label::before {
   content: '';
   position: absolute;
   top: 0;
@@ -540,12 +542,13 @@ input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-ind
   margin-top: 55px;
   margin-bottom: 65px;
   text-align: center;
+  position: relative;
 }
 .big-heading span {
   font-size: 48px;
   line-height: 48px;
   text-align: center;
-  display: inline;
+  display: inline-block;
   margin: 0;
   padding: 0 25px;
   position: relative;
@@ -555,10 +558,14 @@ input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-ind
 .big-heading:after {
   content: "";
   display: block;
-  border-bottom: 2px solid #000;
-  position: relative;
-  top: -25px;
+  position: absolute;
+  top: 50%;
   z-index: 1;
+  left: 0;
+  right: 0;
+  margin-top: -1px;
+  background: #000;
+  height: 2px;
 }
 .custom-list-1 {
   list-style: none;
@@ -609,6 +616,143 @@ input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-ind
   width: 385px;
 }
 
+
+/* Shop page */
+
+.shop-form {
+  float: left;
+  width: calc(100% / 4);
+}
+.shop-form-title {
+  margin-top: 0;
+}
+.shop-form-section,
+.shop-item-card {
+  min-height: 285px;
+  margin-bottom: 20px;
+}
+.shop-form label {
+  padding: 5px 20px 5px 43px;
+  display: block;
+}
+.shop-form input {
+  display: none;
+}
+.shop-items-block {
+  float: right;
+  width: calc((100% / 4) * 3)
+}
+.shop-form input[type="checkbox"] + label,
+.shop-form input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+}
+.shop-form input[type="checkbox"] + label:hover,
+.shop-form input[type="radio"] + label:hover {
+  color: #663d15;
+}
+.shop-form input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000;
+}
+.shop-form input[type="checkbox"]:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url("../img/sprites.png") -1px -1px no-repeat;
+}
+.shop-form input[type="radio"] + label::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../img/sprites.png") 0 -415px no-repeat;
+}
+.shop-form input[type="radio"]:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("../img/sprites.png") 0 -345px no-repeat;
+}
+input[type="checkbox"]:checked:disabled + label,
+input[type="radio"]:checked:disabled + label {
+    opacity: .3;
+    color: #000;
+}
+
+
+/* Items Cards block */
+
+.shop-item-card {
+  display: inline-block;
+  min-width: 220px;
+  margin-right: 20px;
+  line-height: 18px;
+  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.shop-item-card:nth-child(3n+3) {
+  margin-right: -1px;
+}
+.shop-item-image {
+  width: 220px;
+  height: 165px;
+}
+.shop-item-description,
+.shop-item-price {
+  margin: 15px;
+}
+.shop-item-description span {
+  text-transform: none;
+}
+.shop-item-price {
+  height: 40px;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+.shop-item-price p,
+.shop-item-price a {
+  display: inline-block;
+}
+.shop-item-price p {
+  width: 110px;
+}
+.shop-item-price .btn {
+  width: 75px;
+}
+
+
+/* Shop pages links */
+.shop-page-links {
+  margin-top: 35px;
+}
+.shop-page-link-item {
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+}
+.shop-page-link-item--current {
+  background-color: #fff;
+  color: #000;
+}
+.shop-page-link-item:hover {
+  background-color: #663d15;
+  color: #fff;
+}
 
 /* Animations */
 

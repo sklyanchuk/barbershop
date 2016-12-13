@@ -7,16 +7,11 @@ var form = loginForm.querySelector('form');
 var storageLogin = localStorage.getItem('login');
 
 function saveLogin(event) {
-  if (!(inputLogin.value && inputPassword.value)) {
-    event.preventDefault();
-    loginForm.classList.add('modal-error');
-  } else {
-    localStorage.setItem('login', inputLogin.value);
-  }
+  localStorage.setItem('login', inputLogin.value);
 }
 function showLoginForm(event) {
   event.preventDefault();
-  loginForm.classList.add('modal-login-visible');
+  loginForm.classList.add('modal-login-visible', 'modal-login-open-animation');
   if (storageLogin) {
     inputLogin.value = storageLogin;
     inputPassword.focus();
@@ -30,13 +25,19 @@ function closeLoginForm(event) {
 }
 function closeLoginFormEsc(event) {
   if (event.keyCode == 27) {
-    if (loginForm.classList.contains('modal-login-visible')) {
-      loginForm.classList.remove('modal-login-visible');
-    }
+    loginForm.classList.remove('modal-login-visible');
   }
+}
+function notifyError() {
+  loginForm.classList.add('modal-error');
+}
+function cleanupAnimations() {
+  loginForm.classList.remove('modal-login-open-animation', 'modal-error');
 }
 
 form.addEventListener('submit', saveLogin);
 loginFormOpenBtn.addEventListener('click', showLoginForm);
 loginFormCloseBtn.addEventListener('click', closeLoginForm);
 window.addEventListener('keydown', closeLoginFormEsc);
+inputPassword.addEventListener('invalid', notifyError);
+loginForm.addEventListener('animationend', cleanupAnimations);
